@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ /*
+  ~  * Created by Cezary Wasilewski.
+  ~  * Copyright (c) 2020. All rights reserved.
+  ~  * Last modified 2020-01-14.
+  ~  */
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".QueenFarmMethodPickActivity"
+    tools:showIn="@layout/activity_queen_farm_method_pick">
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupIDQueenStep1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:longClickable="true">
+
+        <RadioButton
+            android:id="@+id/radioButton1QueenStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:text="Wychów matki nieunasienionej" />
+
+        <RadioButton
+            android:id="@+id/radioButton2QueenStep1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:duplicateParentState="false"
+            android:text="Wychów matki unasienionej" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroupIDQueenStep2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/radioGroupIDQueenStep1"
+        android:visibility="invisible"
+        android:longClickable="true">
+
+        <RadioButton
+            android:id="@+id/radioButton1QueenStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:text="Poddanie do ulika weselnego \n niewygryzionego matecznika" />
+
+        <RadioButton
+            android:id="@+id/radioButton2QueenStep2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:duplicateParentState="false"
+            android:text="Poddanie do ulika weselnego \n wygryzionej matki nieunasienionej" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/QueenNextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:enabled="false"
+        android:text="Dalej"
+        android:background="@drawable/button_background"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/QueenNextID"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/radioGroupIDQueenStep2"
+        android:background="@color/colorForScrollViews">
+        <TextView
+            android:id="@+id/QueenMethodInfoID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:justificationMode="inter_word"
+            android:text="Wybierz metodę wychowu aby uzyskać informacje na jej temat!" />
+    </ScrollView>
+</RelativeLayout>

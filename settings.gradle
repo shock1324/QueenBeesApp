@@ -1,0 +1,10 @@
+/*******************************************************************************
+ *
+ *  * Created by Cezary Wasilewski.
+ *  * Copyright (c) 2020. All rights reserved.
+ *  * Last modified 2020-01-14.
+ *
+ ******************************************************************************/
+
+include ':app'
+rootProject.name='BeeQueenApp'

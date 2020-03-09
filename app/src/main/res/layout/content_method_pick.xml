@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ /*
+  ~  * Created by Cezary Wasilewski.
+  ~  * Copyright (c) 2020. All rights reserved.
+  ~  * Last modified 2020-01-14.
+  ~  */
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MethodPickActivity"
+    tools:showIn="@layout/activity_method_pick">
+
+    <RadioGroup
+        android:id="@+id/radioGroupID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:longClickable="true">
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:text="Wychów matek w rodzinie bezmatecznej" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="false"
+            android:duplicateParentState="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:text="Wychów matek w obecności matki" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="false"
+            android:duplicateParentState="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:text="Cykliczny wychów matek w ulu wielokorpusowym" />
+
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="false"
+            android:duplicateParentState="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:text="Wychów matek z wykorzystaniem odkładu" />
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:clickable="false"
+            android:duplicateParentState="false"
+            android:enabled="false"
+            android:focusable="false"
+            android:text='Wychów matek metodą "starter-finisher"' />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/NextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:enabled="false"
+        android:text="Dalej"
+        android:background="@drawable/button_background"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/NextID"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/radioGroupID"
+        android:background="@color/colorForScrollViews">
+        <TextView
+            android:id="@+id/methodInfoID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:justificationMode="inter_word"
+            android:text="Wybierz metodę wychowu aby uzyskać informacje na jej temat!" />
+    </ScrollView>
+</RelativeLayout>

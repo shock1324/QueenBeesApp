@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ /*
+  ~  * Created by Cezary Wasilewski.
+  ~  * Copyright (c) 2020. All rights reserved.
+  ~  * Last modified 2020-01-14.
+  ~  */
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorRedForList">#ff8a80</color>
+    <color name="colorGreenForList">#76ff03</color>
+    <color name="colorYellowForList">#ffea00</color>
+    <color name="colorGrayForList">#bdbdbd</color>
+    <color name="colorForScrollViews">#FFF59D</color>
+</resources>

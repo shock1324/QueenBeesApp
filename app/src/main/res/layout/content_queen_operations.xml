@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ /*
+  ~  * Created by Cezary Wasilewski.
+  ~  * Copyright (c) 2020. All rights reserved.
+  ~  * Last modified 2020-01-14.
+  ~  */
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".QueenOperationsActivity"
+    tools:showIn="@layout/activity_queen_operations">
+
+    <LinearLayout
+        android:id="@+id/dateLine3ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Dzisiejsza data:"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/currDateIDQO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Dzisiejsza data:"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateLine3ID"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Wybrany rodzaj matki do wychowu:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Wybrany sposób poddania matki:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView14"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Numer ulika weselnego:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView12"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Nazwa hodowli:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView13"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Czynność do wykonania:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Data czynności do wykonania:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Kolejna czynność:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Data wykonania kolejnej czynności:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView66"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Opis czynnosci do wykonania:"
+        android:textColor="#000000"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/checkboxQOID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="setThis text"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="16dp"
+        android:textSize="12dp"
+        android:layout_alignBaseline="@+id/textView5"/>
+
+
+
+
+    <Button
+        android:id="@+id/saveChangesIDQO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Zaprowadź zmiany!"
+        android:background="@drawable/button_background"/>
+
+    <TextView
+        android:id="@+id/getKindOfQueenToFarmID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView"
+        android:layout_alignParentRight="false"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/textView"
+        android:text="TextView"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/getHowToAddQueenMethodID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView14"
+        android:layout_alignParentRight="false"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@id/textView14"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/getWeedingHiveNumberID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView12"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/textView12"
+        android:text="TextView"
+        android:textSize="12sp" />
+    <TextView
+        android:id="@+id/getQueenFarmNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView13"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/textView13"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/processToDoIDQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView2"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/textView2"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/dateProcessToDoIDQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView3"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/textView3"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/nextProcessIDQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/textView4"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@id/textView4"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/nextProcessDateIDQ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView66"
+        android:layout_marginStart="8dp"
+        android:layout_toRightOf="@+id/textView66"
+        android:text="TextView"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupOperationsID"
+        android:weightSum="100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/textView5"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/radioButtonInsNotNaturalyID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:clickable="true"
+            android:textSize="10dp"
+            android:autofillHints=""
+            android:text="Unasienienie sztuczne"
+            android:enabled="false"/>
+        <RadioButton
+            android:id="@+id/radioButtonInsNaturalyID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_alignBaseline="@id/radioButtonInsNotNaturalyID"
+            android:clickable="true"
+            android:textSize="10dp"
+            android:text="Unasienienie naturalne" />
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/saveChangesIDQO"
+        android:layout_below="@id/radioGroupOperationsID"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorForScrollViews">
+        <TextView
+            android:id="@+id/processInfoIDQO"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:justificationMode="inter_word"/>
+    </ScrollView>
+
+</RelativeLayout>

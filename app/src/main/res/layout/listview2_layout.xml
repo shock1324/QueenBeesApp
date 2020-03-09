@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ /*
+  ~  * Created by Cezary Wasilewski.
+  ~  * Copyright (c) 2020. All rights reserved.
+  ~  * Last modified 2020-01-14.
+  ~  */
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="100">
+
+    <TextView
+        android:id="@+id/QueenFarmNameLayID"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:layout_weight="24"
+        android:text="x" />
+    <TextView
+        android:id="@+id/QueenFarmDateLayID"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="23"
+        android:gravity="center"
+        android:text="x" />
+    <TextView
+        android:id="@+id/QueenHomeLayID"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="30"
+        android:gravity="center"
+        android:text="x" />
+
+    <TextView
+        android:id="@+id/QueenStepLayID"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="30"
+        android:layout_gravity="fill"
+        android:text="x"
+        android:gravity="fill"
+        android:textAlignment="center" />
+
+
+</LinearLayout>

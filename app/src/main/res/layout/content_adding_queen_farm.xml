@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ /*
+  ~  * Created by Cezary Wasilewski.
+  ~  * Copyright (c) 2020. All rights reserved.
+  ~  * Last modified 2020-01-14.
+  ~  */
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".AddingQueenFarmActivity"
+    tools:showIn="@layout/activity_adding_queen_farm">
+
+    <LinearLayout
+        android:id="@+id/dateLine3ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/currDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Dzisiejsza data:"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/currDateAQFID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Dzisiejsza data:"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/labelText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dateLine3ID"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Wybrana metoda wychowu matki:"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/PickedMethodStep1ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/labelText1"
+        android:text="TextView" />
+
+
+    <TextView
+        android:id="@+id/labelText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PickedMethodStep1ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Wybrana metoda poddania matki:"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/PickedMethodStep2ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/labelText2"
+        android:text="brak" />
+
+    <TextView
+        android:id="@+id/labelText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PickedMethodStep2ID"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Numer ulika weselnego:"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/WeedingHiveNumberID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelText3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Wprowadź numer"
+        android:textSize="14sp"
+        android:inputType="number"
+        android:maxLength="3"
+        />
+
+    <TextView
+        android:id="@+id/labelText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/WeedingHiveNumberID"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Nr/Nazwa matki: "
+        android:textColor="#000000"
+        android:textSize="18sp" />
+    <EditText
+        android:id="@+id/QueenNumberNameID"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelText4"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:hint="Wprowadź numer i/lub nazwę"
+        android:textSize="14sp"
+        android:inputType="text"
+        android:maxLength="15"
+        />
+
+    <TextView
+        android:id="@+id/labelText5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/QueenNumberNameID"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Informacje:"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/startQueenFarmID"
+        android:layout_width="382dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Rozpocznij hodowlę!"
+        android:background="@drawable/button_background"/>
+
+    <TextView
+        android:id="@+id/QueenFarmInfoID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/labelText5"
+        android:layout_above="@+id/startQueenFarmID"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:justificationMode="inter_word"
+        android:text="@string/addQueenFarmInfoID" />
+
+
+</RelativeLayout>

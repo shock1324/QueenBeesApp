@@ -1,0 +1,275 @@
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  ~ /*
+  ~  * Created by Cezary Wasilewski.
+  ~  * Copyright (c) 2020. All rights reserved.
+  ~  * Last modified 2020-01-14.
+  ~  */
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<resources>
+    <string name="app_name">Hodowla matek pszczelich</string>
+    <string name="action_settings">Ustawienia</string>
+    <string name="title_activity_wybor_metody">Wybor metody wychowu</string>
+    <string name="title_activity_dodaj_hodowle">Dodawanie nowej hodowli w rodzinie</string>
+    <string name="title_activity_operacje">Prace pasieczne</string>
+    <string name="title_activity_queen_farm_list">Lista hodowli matek (jednostkowych)</string>
+    <string name="title_activity_basic_farm">Lista hodowli matek (zbiorowych)</string>
+    <string name="title_activity_info_about_app">Informacje o aplikacji</string>
+    <string name="title_activity_adding_queen_farm">Dodawanie matki do wychowu</string>
+    <string name="title_activity_queen_farm_method_pick">Wybór metody wychowu matki</string>
+    <string name="title_activity_queen_operations">Prace pasieczne</string>
+
+<string name="addFarmInfoID"> Hodowla rozpocznie się wraz z naciśnięciem przycisku
+    "ROZPOCZNIJ HODOWLĘ". Przed rozpoczęciem upewnij się, że jeszcze dziś bedziesz w stanie wykonać
+    pierwsze czynności,którymi są przygotowanie rodziny wychowującej (osierocenie i ustawienie
+    gniazda pod hodowlę) oraz poddanie ramki hodowlanej. </string>
+
+<string name="addQueenFarmInfoID"> Hodowla rozpocznie się wraz z naciśnięciem przycisku
+    "ROZPOCZNIJ HODOWLĘ". W przypadku niektórych rodzajów hodowli konieczne będzie wykonanie
+    prac jeszcze dziś!Przed rozpoczęciem upewnij się, że jeszcze dziś bedziesz w stanie wykonać
+    pierwsze czynności, jeśli będzie to konieczne. </string>
+
+<string name="WWRBMOpisCzynności1"> Przed podaniem ramki hodowlanej z jednodiowymi larwami do
+    wychowu, należy najpierw wybrać i przygotować rodzinę wychowującą. Rodzina, w której można
+    prowadzić wychówbez obecności matki powina być bardzo silna. Powinna zawierać między 50-60tys.
+    pszczół w różnymwieku oraz bardzo duże zapasy pokarmu zarówno białkowego jak i węglowodanowego.
+    Przygotowaniazaczynamy od zabrania matki pszczelej z tej rodziny. W momencie kiedy rodzina jest
+    już osierocona,należy dodatkowo zabrać kratę odgrodową, jeżeli była już osadzona w ulu,
+    dostawić podkarmiaczkęoraz ustawić ramki w odpowiedni sposób. Ramki z czerwiem otwartym powinny
+    być ustawione obok siebie,zaś dookoła nich powinien znajdować się pokarm oraz czerw zamknięty.
+    Całą czynność należy wykonaćnajlepiej osiem godzin przed planowanym poddaniem ramki hodowlanej
+    z larwami do wychowu.</string>
+
+<string name="WWRBMMethodInfo"> Metoda ta polega na wychowywaniu larw w rodzinie osieroconej,
+    pozbawionej matki. Pszczoły po jakimś czasie od zabrania matki bardzo dobrze zaczynają wyczuwać
+    jej brak. Dzięki temu bardzo chętnie zaczynają wychowywać poddane larwy w ramce hodowlanej,
+    chcąc odzyskać matkę. Trzeba pamiętać, że w każdym ulu musi być dokładnie jedna matka, w innym
+    wypadku rodzina pszczela nie możepoprawnie funkcjonować. W tej metodzie można wychować
+    maksymalnie jedną serie hodowlaną z maksymalnie CZTERDZIESTOMA larwami w ramce hodowlanej.
+    Dodatkowo przy wychowie matek tą metodą hodowca nie potrzebuje tzw. „cieplarki”, czyli
+    inkubatora, który jest narzędziem opcjonalnym do wykorzystania w całym procesie.
+    Wychów w rodzinie osieroconej możliwy jest w każdym typie ula.</string>
+
+
+    //MainFarmOperationInfosStrings for stepMethods
+<string name="processDescriptionInfoStep1">Przed podaniem ramki hodowlanej z jednodiowymi larwami
+    do wychowu, należy najpierw wybrać i przygotować rodzinę wychowującą. Rodzina, w której można
+    prowadzić wychów bez obecności matki powina być bardzo silna. Powinna mieć między 50-60tys.
+    pszczół w różnym wieku oraz bardzo duże zapasy pokarmu zarówno białkowego jak i węglowodanowego.
+    Przygotowania zaczynamy od zabrania matki pszczelej z tej rodziny. W momencie kiedy rodzina jest
+    już osierocona, należy dodatkowo zabrać kratę odgrodową, jeżeli była już osadzona w ulu,
+    dostawić podkarmiaczkę oraz ustawić ramki w odpowiedni sposób. Ramki z czerwiem otwartym
+    powinny być ustawione obok siebie, zaś dookoła nich powinien znajdować się pokarm oraz
+    czerw zamknięty. Całą czynność należy wykonać najlepiej osiem godzin przed planowanym
+    poddaniem ramki hodowlanej z larwami do wychowu.</string>
+<string name="processDescriptionInfoStep2">W tej czynności poddajemy ramkę hodowlaną wraz z
+    jednodiowymilarwami (NAJLEPIEJ 6-8H PO OSIEROCENIU RODZINY!). Ramkę hodowlaną należy
+    umieścić między ramkami z czerwiem otwartym."</string>
+<string name="processDescriptionInfoStep3">W tej czynności należy sprawdzić przyjęcia larw, oraz
+    usunąć larwy nieprzyjęte. Pszczoły mogą nie chcieć karmić niektórych larw. Nieprzyjęte larwy,
+    należy odrazu w bardzo ostrożny i delikatny sposób usunąć z ramki hodowlanej tak, aby nie
+    uszkodzić reszty poprawnie przyjętych larw. Ponadto pszczoły najprawdopodobniej wybudują kilka
+    tzw. "mateczników ratunkowych". Wyczuwając brak substancji matecznej w ulu pszczoły, mimo tego
+    że hodowca poddaje im larwy do wychowu, mogą wybudować swoje mateczniki. Matki z tych
+    mateczników zazwyczaj są słabej jakości i nie utrzymują cech genetycznych porządanych przez
+    pszczelarza. W związku z tym przy kontroli przyjęć larw na ramce hodowlanej, należy zlikwidować
+    również mateczniki ratunkowe.
+\n\nUWAGA!: Jeśli chcesz dalej prowadzić wychów z wykorzystaniem cieplarki, zaznacz opcję
+    "Użyj cieplarki"!!!</string>
+<string name="processDescriptionInfoStep4">Ósmego dnia po poddaniu ramki hodowlanej do wychowu,
+    należy jeszcze raz sprawdzić czy pszczoły nie zbudowały „mateczników ratunkowych”.
+    Jeżeli tak, należy je usunąć."</string>
+<string name="processDescriptionInfoStep5">W tej czynności należy sprawdzić przyjęcia larw,
+    oraz usunąć larwy nieprzyjęte. Pszczoły mogą nie chcieć karmić niektórych larw.
+    Nieprzyjęte larwy, należy odrazu w bardzo ostrożny i delikatny sposób usunąć z ramki hodowlanej
+    tak, aby nie uszkodzić reszty poprawnie przyjętych larw. Ponadto pszczoły najprawdopodobniej
+    wybudują kilka tzw. „mateczników ratunkowych”. Wyczuwając brak substancji matecznej w ulu pszczoły,
+    mimo tego że hodowca poddaje im larwy do wychowu, mogą wybudować swoje mateczniki. Matki z
+    tych mateczników zazwyczaj są słabej jakości i nie utrzymują cech genetycznych porządanych przez
+    pszczelarza. W związku z tym przy kontroli przyjęć larw na ramce hodowlanej, należy zlikwidować
+    również mateczniki ratunkowe."</string>
+<string name="processDescriptionInfoStep6">Odrazu po zabraniu zaizolowanych matek z rodziny
+    wychowującej, należy na nowo w odpowiedni sposób ustawić rodzinę oraz poddać jej  matkę.
+    Zwykle poddaje się nową, młodą matkę, a nie tą która została zabrana przy osieracaniu!
+    Wybór sposobu poddania nowej matki, zależy głównie od preferencji hodowcy.
+\n\nW tym momencie zaizolowane mateczniki stają się materiałem do dalszej hodowli matek (hodowla jednostkowa).
+\n\nAby kontynuować hodowlę jednostkową, przejdź do panelu "Lista hodowli matek (jednostkowych)" za
+    pomocą przycisku "JEDNOSTKOWY WYCHÓW MATEK", kliknij przycisk "DODAJ WYCHÓW",
+    a następnie postępuj zgodnie z poleceniami wyświetlonymi na ekranie.</string>
+<string name="processDescriptionInfoStep4warm">Jeśli zdecydowałeś/aś się na przeniesienie mateczników
+    do cieplarki musisz pobrać je z ramki hodowlanej, a następnie umieścić w cieplarce.
+    Całą czynność należy wykonywać bardzo ostrożnie i delikatnie tak, aby nie uszkodzić przyszłych
+    matek znajdujących się wewnątrz matecznika!!!"</string>
+<string name="processDescriptionInfoStep5warm">Odrazu po zabraniu ramki hodowlanej z matecznikami z
+    rodziny wychowującej, należy na nowo w odpowiedni sposób ustawić rodzinę oraz poddać jej  matkę.
+    Zwykle poddaje się nową, młodą matkę, a nie tą która została zabrana przy osieracaniu!
+    Wybór sposobu poddania nowej matki, zależy głównie od preferencji hodowcy."</string>
+<string name="processDescriptionInfoStep6warm">Całą czynność izolowania, należy wykonywać bardzo
+    ostrożnie i delikatnie tak, aby nie uszkodzić przyszłych matek znajdujących się wewnątrz matecznika!
+    W momencie, gdy hodowca oceni w trakcie izolowania mateczników, że niektóre z nich są zbyt małe
+    lub w jakikolwiek sposób uszkodzone, powinien jeszcze przed wygryzieniem je zlikwidować.
+\n\nW tym momencie zaizolowane mateczniki stają się materiałem do dalszej hodowli matek (hodowla jednostkowa).
+\n\nAby kontynuować hodowlę jednostkową, przejdź do panelu "Lista hodowli matek (jednostkowych)"
+    za pomocą przycisku "JEDNOSTKOWY WYCHÓW MATEK", kliknij przycisk "DODAJ WYCHÓW",
+    a następnie postępuj zgodnie z poleceniami wyświetlonymi na ekranie.</string>
+
+
+
+//QueenFarmOperationInfosStrings for QueenStepsMethods
+    //////steps for not inseminated queens//////
+<string name="processDescriptionInfoStep1mnQ">Po podjęciu decyzji o hodowli matki nieunasienionej,
+    należypoczekać na jej wygryzienie. Do momentu wygryzienia się, matka cały czas pozostajew izolatorze,
+    do którego została przeniesiona w podprocesie wychowu lub w rodzinie wychowującej"</string>
+<string name="processDescriptionInfoStep2mnQ">Po wygryzieniu się matki należy ją wyłapać do oznakowania,
+    oznakować, a następnie przenieść do klateczki transportowej wraz z pszczołami z rodziny,
+    w której była wychowywana.
+\n\nW tym momencie nieunasieniona matka jest gotowa do użytku."
+</string>
+
+    ////// steps for inseminated queens added before born //////
+<string name="processDescriptionInfoStep1muNWQ">Jeśli hodowca zdecyduje się na poddanie matki do
+    ulika weselnego przed wygryzieniem, powinien jak najszybciej przygotować lub mieć już
+    przygotowany, zasiedlony ulik weselny na przyjęcie matecznika. Przygotowanie ulika weselnego
+    trwa jedną lub dwie doby. Jest to proces dość złożony, wymagający posiadania odpowiedniej
+    wiedzy z zakresu pszczelarstwa. Ponadto istnije kilka sposobów tworzenia ulików weselnych,
+    a wybór pozostaje w gestii hodowcy.</string>
+<string name="processDescriptionInfoStep2muNWQ">Do ulika weselnego gotowego na przyjęcie matki,
+    poddajemy niewygryziony matecznik. Całą czynność należy wykonać bardzo ostrożnie tak, aby nie
+    uszkodzić matki znajdującej się wewnątrz matecznika!</string>
+<string name="processDescriptionInfoStep3muNWQ">Po dwóch dniach należy dokonać kontroli poprawnego
+    wygryzienia matki oraz jej przyjęcia przez pszczoły. W niektórych przypadkach pszczoły nie
+    przyjmują matki, albo matka tuż po wygryzieniu jest wadliwa. Wówczas hodowla danej matki kończy
+    się niepowodzeniem.</string>
+<string name="processDescriptionInfoStep4muNWQ">Po poddaniu matek do ulików weselnych, po określonym
+    czasie należy sprawdzić czy czerwią prawidłowo. W przypadku matek unasienianych naturalnie,
+    matki powinny czerwić około dziesiątego dnia (mogą zacząć też później) od wygryzienia się w
+    uliku weselnym. W trakcie kontroli może okazać się, żę nie ma. Istnieje możliwość, że matka
+    zginęła w trakcie lotu godowego bądź z innych przyczyn, na które hodowca nie ma wpływu.
+    W tym momencie hodowla danej matki kończy się niepowodzeniem.</string>
+<string name="processDescriptionInfoStep5muNWQ">Po kontroli czeriwiu, jeśli hodowca nie ma żadnych
+    zastrzeżeń, matkę należy wyłapać, oznakować i przenieść do klateczki transportowej wraz z
+    pszczołami,z którymi matka wychowywała się w uliku weselnym.
+\n\nW tym momencie cały proces hodowli dobiega końca. Hodowca otrzymuje gotowy produkt jakim jest
+    unasieniona matka pszczela ze spradzwonym czeriweniem.</string>
+
+    ////// steps for inseminated queens added before born //////
+<string name="processDescriptionInfoStep1muWQ">Po podjęciu decyzji o wychowie matku unasienionej,
+    hodowca musi wybrać czy matka będzie unanieniana sztucznie w procesie inseminacji, czy naturalnie.
+    Po dokonaniu wybrou hodowca może odrazu przejść do następnego kroku jakim jest "Przygotowanie
+    ulika weselnego.</string>
+<string name="processDescriptionInfoStep2muWQ">Jeśli hodowca zdecyduje się na poddanie matki do
+    ulika weselnego po wygryzieniu, do nateuralnego unasienienia, powinien jak najszybciej
+    przygotować ulik weselny, aby był gotowy na przyjęcie matki po wygryzieniu. Przygotowanie
+    ulika weselnego trwa jedną lub dwie doby. Jest to proces dość złożony, wymagający posiadania
+    odpowiedniej wiedzy z zakresu pszczelarstwa. Ponadto istnije kilka sposobów tworzenia ulików
+    weselnych, a wybór pozostaje w gestii hodowcy.</string>
+<string name="processDescriptionInfoStep3muWQ">Do ulika weselnego gotowego na przyjęcie matki,
+    poddajemy matkę. Isnieje wiele metod poddawania matki. Wybór odpowiedniej metody zależy przede
+    wszystkim od preferencji hodowcy. Najbardziej popularną metodą jest poddanie matki w otwartej
+    klateczce transportowej do ulika, z otworem zaklejonym ciastem miodowo-cukrowym, aby pszczoły
+    z czasem odblokowały przejscie dla matki.</string>
+<string name="processDescriptionInfoStep4muWQ">Po poddaniu matek do ulików weselnych, po określonym
+    czasie należy sprawdzić czy czerwią prawidłowo. W przypadku matek unasienianych naturalnie,
+    matki powinny czerwić około dziesiątego dnia (mogą zacząć też później) od poddania do ulika
+    weselnego. W trakcie kontroli może okazać się, że matki nie ma. Istnieje możliwość, że matka
+    zginęła w trakcie lotu godowego bądź z innych przyczyn, na które hodowca nie ma wpływu.
+    W tym momencie hodowla danej matki kończy się niepowodzeniem</string>
+<string name="processDescriptionInfoStep5muWQ">Po kontroli czeriwiu, jeśli hodowca nie ma żadnych
+    zastrzeżeń, matkę należy wyłapać, oznakować i przenieść do klateczki transportowej wraz z
+    pszczołami, z którymi matka wychowywała się w uliku weselnym.
+\n\nW tym momencie cały proces hodowli dobiega końca. Hodowca otrzymuje gotowy produkt jakim jest
+    unasieniona matka pszczela ze spradzwonym czeriweniem.</string>
+
+    //Queen method pick string values
+<string name="QueenMethodInseminated"> Matka zapłodniona. Istnieje dalsza możliwość wychowu matki
+    unasienionej sztucznie lub naturalnie (w wersji demonstracyjnej aplikacji tylko naturalnie).
+    W przypadku unasieniania naturalnego, po wygryzieniu matkę przenosi sie do tzw. „ulika weselnego”,
+    a następnie oczekuje się na jej unasienienie. W momencie kiedy w uliku weselnym widać, że matka
+    zaczęła poprawnie czerwić, matka jest gotowa do znakowania i użytku. Cały proces zajmuje średnio
+    kilkanaście dni</string>
+
+<string name="QueenMethodNotinseminated">Matka nie zapłodniona. Można taką matkę poddać do rodziny,
+    jednak trzeba liczyć się z faktem, że może ona zginąć w trakcie procesu naturalnego unasieniania
+    oraz po poddaniu do rodziny nie będzie od razu czerwić. Taka matka jest gotowa do poddania do
+    rodziny pszczelej tuż po wygryzieniu.</string>
+
+<string name="QueenMethodLarv"> Wybierając tą opcję decydujesz się na poddanie matki do ulika weselnego
+    przed wygryzieniem z matecznika. Przed poddaniem matecznika musisz mieć przygotowane uliki
+    weselne z pszczołami, gotowe na jego przyjęcie. </string>
+<string name="QueenMethodQueen"> Wybierając tą opcję decydujesz się na poddanie matki do ulika weselnego
+    po wygryzieniu z matecznika. Przed poddaniem matecznika musisz mieć przygotowane uliki
+    weselne z pszczołami, gotowe na jego przyjęcie.</string>
+
+    //Infos about app
+    <string name="MainPanelInfoTitle">Panel główny aplikacji:</string>
+    <string name="MainPanelInfo"> Panel WYCHÓW W RODZINIE WYCHOWUJĄCEJ zawiera listę wszystkich
+        hodowli zbiorowych w rodzinach wychowujących (obejmuje wychów matek od momentu przekładania larw
+        do wychowu, aż do zaizolowania mateczników do dalszego wychowu). Umożliwia dodawanie nowych hodowli,
+        usuwanie wybranych hodowli z listy oraz usuwanie wszystkich zakończonych hodowli z listy.
+        Każda hodowla oznaczona jest innym kolorem, wskazującym na stan jej zaawansowania.Opis kolorów
+        znajdziesz na samym końcu informacji o aplikacji.
+        \nPanel JEDNOSTKOWY WYCHÓW MATEK – zawiera listę wszystkich hodowli jednostkowych dla każdej
+        matki (obejmuje wychów matek od momentu przejęcia zaizolowanych mateczników, aż do uzyskania
+        porządanego rodzaju matki). Umożliwia dodawanie nowych wychowów, usuwanie wybranych wychowów
+        z listy oraz usuwanie wszystkich zakończonych wychowów matek. Każdy wychów oznaczony jest
+        innym kolorem, wskazującym na stan jego zaawansowania. Opis kolorów znajdziesz na samym końcu
+        informacji o aplikacji.
+        \nPanel INFORMACJE O APLIKACJI – zawiera wszystkie informacje opisujące działanie i funkcje aplikacji.
+        \nPrzycisk ZAMKNIJ APLIKACJĘ – pozwala na zamknięcie aplikacji.</string>
+
+    <string name="InfoAboutGroupFarmTitle">Funkcje w panelu WYCHÓW W RODZINIE WYCHOWUJĄCEJ:</string>
+    <string name="InfoAboutGroupFarm"> Przycisk DODAJ HODOWLĘ – po naciśnieciu tego przycisku musisz
+        najpierw potwierdzić, że chcesz rozpocząć nową hodowlę. Pojawi się panel, w którym musisz
+        wybrać jaką metodą chcesz wychować mateczniki wraz ze szczegółowymi informacjami na ten temat.
+        Po podjęciu decyzji, pojawi się kolejny panel do wprowadzenia nazwy hodowli. Na sam koniec,
+        musisz zatwierdzić wprowadzone dane. Po zatwierdzeniu ta hodowla pojawi się w liście panelu
+        WYCHÓW W RODZINIE WYCHOWUJĄCEJ. Po dodaniu do listy hodowli, możesz nimi zarządzać zaprowadzając w nich zmiany!
+        \nPo nacisnieciu wybranej pozycji w liście dostaniesz się do kolejnego panelu o nazwie PRACE PASIECZNE.
+        Znajduje się w nim podgląd szczegółowych informacji na temat danej hodowli, nazwa najbliższej
+        czynności do wykonania oraz nazwa kolejnej czynności do wykonania wraz z datami. Ponadto znajdziesz
+        tam szczegółowy opis czynności do wykonania wraz z wymaganym zapleczem technicznym niezbędnym
+        do wykonania prac. Po zaprowadzeniu zmian w pasiece, wciśnij przycisk ZAPROWADZ ZMIANY!,
+        aby przejść do następnego kroku w cyklu hodowlanym. W trakcie wykonywania niektórych kroków
+        pojawiają się opcjonalne pola do zaznaczenia. Oznaczają one zazwyczaj sytuacje decyzyjne i wybory,
+        których musi dokonać hodowca. Niekiedy jednak pola są konieczne do zaznaczenia jako potwierdzenie,
+        że dana czynność została wykonana.
+        \nPamiętaj, że jeśli nie wykonasz prac w terminie wyznaczonym w panelu informacyjnym, dana hodowla nie powiedzie się!!!
+        \nOpis skrótów kroków danej hodowli w panelu WYCHÓW W RODZINIE WYCHOWUJĄCEJ:
+        \na) 1 - 6: kroki wychówu w rodzinie bezmatecznej bez wykorzystania ceplarki.
+        \nb) 4ciep - 6ciep: kroki wychówu w rodzinie bezmatecznej po podjęciu decyzji o wykorzystaniu cieplarki w kroku 3.
+        </string>
+
+    <string name="InfoAboutUnitFarmTitle">Funkcje w panelu JEDNOSTKOWY WYCHÓW MATEK:</string>
+    <string name="InfoAboutUnitFarm"> Przycisk DODAJ WYCHÓW – po naciśnieciu tego przycisku musisz
+        najpierw potwierdzić, że chcesz rozpocząć nowy wychów. Pojawi się panel, w którym musisz wybrać
+        jaki rodzaj matki chcesz wychować wraz ze szczegółowymi informacjami na ten temat. Po podjęciu
+        decyzji, pojawi się kolejny panel do wprowadzenia nazwy hodowli oraz numeru ulika weselnego,
+        w którym chcesz prowadzić wychów. Na sam koniec, musisz zatwierdzić wprowadzone dane.
+        Po zatwierdzeniu ta hodowla pojawi się w liście panelu JEDNOSTKOWY WYCHÓW MATEK. Po dodaniu
+        do listy hodowli, możesz nimi zarządzać zaprowadzając w nich zmiany!
+        \nPo nacisnieciu wybranej pozycji w liście dostaniesz się do panelu o nazwie PRACE PASIECZNE.
+        Znajduje się w nim podgląd szczegółowych informacji na temat danej hodowli, nazwa najbliższej
+        zynności do wykonania oraz nazwa kolejnej czynności do wykonania wraz z datami. Ponadto znajdziesz
+        tam szczegółowy opis czynności do wykonania wraz z wymaganym zapleczem technicznym niezbędnym
+        do wykonania prac. Po zaprowadzeniu zmian w pasiece, wciśnij przycisk ZAPROWADZ ZMIANY!,
+        aby przejść do następnego kroku w cyklu hodowlanym. W trakcie wykonywania niektórych kroków
+        pojawiają się opcjonalne pola do zaznaczenia. Oznaczają one zazwyczaj sytuacje decyzyjne i wybory,
+        których musi dokonać hodowca. Niekiedy jednak pola są konieczne do zaznaczenia jako potwierdzenie,
+        że dana czynność została wykonana.
+        \nPamiętaj, że jeśli nie wykonasz prac w terminie wyznaczonym w panelu informacyjnym, dana hodowla nie powiedzie się!!!
+        \nOpis skrótów kroków danej hodowli w panelu JEDNOSTKOWY WYCHÓW MATEK:
+        \na) 1mn - Koniec hodowli (mn): kroki w wychowie matki nieunasienionej.
+        \nb) 1muNW - Koniec hodowli (muNW): kroki w wychowie matki unasienionej poddanej do wychowu przed wygryzieniem z matecznika.
+        \nc) 1muW-Koniec hodowli (muW): kroki w wychowie matki unasienionej poddanej do wychowu po wygryzieniu z matecznika.
+        </string>
+
+    <string name="InfoAboutColorsTitle">Kolory w listach hodowli/wychowów:</string>
+    <string name="InfoAboutColors">ZIELONY – oznacza, że daną czynność należy wykonać bieżącego dnia
+        lub nie ma konkretnej daty na wykonanie tej czynności. W takiej sytuacji należy wykonać ją najszybciej jak to możliwe.
+        \nŻÓŁTY – onacza, że należy poczekać z wykonaniem najbliższej czynności (data podana w pozycji
+        danej hodowli lub informacjach szczegółowych)
+        \nCZERWONY – oznacza, że minął termin wykonania ostatniej czynnośći i hodowla zakończyła się niepowodzeniem. Należy ją usunąć.
+        \nSZARY – oznacza, że dana hodowla zakończyła się sukcesem.
+</string>
+
+</resources>
