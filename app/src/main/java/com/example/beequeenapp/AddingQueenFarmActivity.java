@@ -7,23 +7,19 @@
  ******************************************************************************/
 
 package com.example.beequeenapp;
+
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class AddingQueenFarmActivity extends AppCompatActivity {
     TextView choosenMethodStep1Q, choosenMethodStep2Q, currDateTVQ;
@@ -44,7 +40,7 @@ public class AddingQueenFarmActivity extends AppCompatActivity {
         choosenMethodStep2Q = findViewById(R.id.PickedMethodStep2ID);
         QueenName = findViewById(R.id.QueenNumberNameID);
         WeedingBeehiveNumber = findViewById(R.id.WeedingHiveNumberID);
-        currDateTVQ = findViewById(R.id.currDateAQFID);
+        currDateTVQ = findViewById(R.id.dateMainAddingQueenFarmID);
         startQueenFarmButton = findViewById(R.id.startQueenFarmID);
 
         //setting method and date
@@ -95,5 +91,28 @@ public class AddingQueenFarmActivity extends AppCompatActivity {
                 }
             }
         });
+        //showing current time in activity
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(10);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                TextView tTime = findViewById(R.id.timeMainAddingQueenFarmID);
+                                long date = System.currentTimeMillis();
+                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
+                                String timeString = sdfT.format(date);
+                                tTime.setText(timeString);
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
+                }
+            }
+        };
+        t.start();
     }
 }

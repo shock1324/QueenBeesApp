@@ -7,17 +7,19 @@
  ******************************************************************************/
 
 package com.example.beequeenapp;
+
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import java.text.SimpleDateFormat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.util.Calendar;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import java.text.SimpleDateFormat;
 
 public class AddingFarmActivity extends AppCompatActivity {
     TextView choosenMethod, currDateTV;
@@ -35,7 +37,7 @@ public class AddingFarmActivity extends AppCompatActivity {
         //Adding XML objects
         choosenMethod = findViewById(R.id.PickedMethodStep1ID);
         beeFamilyName = findViewById(R.id.WeedingHiveNumberID);
-        currDateTV = findViewById(R.id.currDate2ID);
+        currDateTV = findViewById(R.id.dateMainAddingFarmID);
         startButton = findViewById(R.id.startID);
 
         //setting method and date
@@ -65,14 +67,29 @@ public class AddingFarmActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-    //setting current date
-    private void currentDate()
-    {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        currentDate = dateFormat.format(calendar.getTime());
-        currDateTV.setText(currentDate);
+        //showing current time in activity
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(10);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                TextView tTime = findViewById(R.id.timeMainAddingFarmID);
+                                long date = System.currentTimeMillis();
+                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
+                                String timeString = sdfT.format(date);
+                                tTime.setText(timeString);
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
+                }
+            }
+        };
+        t.start();
     }
 }
 
