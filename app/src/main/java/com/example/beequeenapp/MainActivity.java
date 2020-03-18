@@ -7,30 +7,28 @@
  ******************************************************************************/
 
 package com.example.beequeenapp;
+
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
-import android.widget.Adapter;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
-import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
 Button BasicFarmButton, QueenFarmListButton, CloseAppButton, InfoAboutApp;
+TextView currentDateMain;
     private static Context mContext;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +42,10 @@ Button BasicFarmButton, QueenFarmListButton, CloseAppButton, InfoAboutApp;
         QueenFarmListButton = findViewById(R.id.QueenFarmButtonID);
         InfoAboutApp = findViewById(R.id.InfoAboutAppID);
         CloseAppButton = findViewById(R.id.CloseAppID);
+        currentDateMain = findViewById(R.id.dateMainID);
+
+        //setting current date
+        currentDate(currentDateMain);
 
         //Setting buttons listeners
         BasicFarmButton.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +76,35 @@ Button BasicFarmButton, QueenFarmListButton, CloseAppButton, InfoAboutApp;
                 System.exit(0);
             }
         });
+
+        //showing current time in activity
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(10);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                TextView tTime = findViewById(R.id.timeMainID);
+                                long date = System.currentTimeMillis();
+                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
+                                String timeString = sdfT.format(date);
+                                tTime.setText(timeString);
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
+                }
+            }
+        };
+        t.start();
     }
+
+
+
+
     //setting current date - used in other activities
     public static void currentDate(TextView x){
         Calendar calendar = Calendar.getInstance();
@@ -82,6 +112,8 @@ Button BasicFarmButton, QueenFarmListButton, CloseAppButton, InfoAboutApp;
         String currentDateStr = dateFormat.format(calendar.getTime());
         x.setText(currentDateStr);
     }
+
+
 
     public static Context getContext() {
         return mContext;

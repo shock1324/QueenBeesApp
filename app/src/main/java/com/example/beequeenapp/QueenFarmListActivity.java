@@ -7,27 +7,30 @@
  ******************************************************************************/
 
 package com.example.beequeenapp;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.lang.reflect.Type;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 
 public class QueenFarmListActivity extends AppCompatActivity {
@@ -45,7 +48,7 @@ public class QueenFarmListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //Adding XML objects
-        QueenCurrentDateTV = findViewById(R.id.QueenCurrDateID);
+        QueenCurrentDateTV = findViewById(R.id.dateQueenFarmListID);
         QueenFarmList = findViewById(R.id.QueenFarmListID);
         AddNewQueenFarmButton = findViewById(R.id.AddNewQueenFarmID);
         DeleteAllFinishedFarms = findViewById(R.id.DeleteAllBFinishedFarmsQID);
@@ -166,6 +169,31 @@ public class QueenFarmListActivity extends AppCompatActivity {
                         .show();
             }
         });
+
+        //showing current time in activity
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(10);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                TextView tTime = findViewById(R.id.timeQueenFarmListID);
+                                long date = System.currentTimeMillis();
+                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
+                                String timeString = sdfT.format(date);
+                                tTime.setText(timeString);
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
+                }
+            }
+        };
+
+        t.start();
     }
 
     //getting data back from other activities

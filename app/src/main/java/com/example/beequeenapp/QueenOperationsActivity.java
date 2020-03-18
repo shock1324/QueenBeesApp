@@ -7,12 +7,10 @@
  ******************************************************************************/
 
 package com.example.beequeenapp;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -20,6 +18,11 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -54,7 +57,7 @@ public class QueenOperationsActivity extends AppCompatActivity {
         processToDoTVQ = findViewById(R.id.processToDoIDQ);
         dateProcessToDoTVQ = findViewById(R.id.dateProcessToDoIDQ);
         nextProcessTVQ = findViewById(R.id.nextProcessIDQ);
-        currDateTVQ = findViewById(R.id.currDateIDQO);
+        currDateTVQ = findViewById(R.id.dateQueenOperationsID);
         processInfoTVQ = findViewById(R.id.processInfoIDQO);
         nextProcessDateTVQ = findViewById(R.id.nextProcessDateIDQ);
         saveChangesButtonQ = findViewById(R.id.saveChangesIDQO);
@@ -153,6 +156,32 @@ public class QueenOperationsActivity extends AppCompatActivity {
             }
 
         });
+
+
+        //showing current time in activity
+        Thread t = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(10);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                TextView tTime = findViewById(R.id.timeQueenOperationsID);
+                                long date = System.currentTimeMillis();
+                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
+                                String timeString = sdfT.format(date);
+                                tTime.setText(timeString);
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
+                }
+            }
+        };
+
+        t.start();
     }
 
     //setting saveChangesButton visibility

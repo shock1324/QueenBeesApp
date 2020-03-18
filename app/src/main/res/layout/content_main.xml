@@ -74,5 +74,73 @@
 
     </RelativeLayout>
 
+    <LinearLayout
+        android:id="@+id/NamesLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/dateMainStompID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:gravity="fill"
+            android:text="Data:"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="28dp" />
+
+        <TextView
+            android:id="@+id/timeMainStompID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:gravity="fill"
+            android:text="Godzina:"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="28dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/DateAndTimeLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/NamesLine"
+        android:layout_centerHorizontal="true"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/dateMainID"
+            android:gravity="fill"
+            android:textAlignment="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="28dp"/>
+
+        <TextView
+            android:id="@+id/timeMainID"
+            android:gravity="fill"
+            android:textAlignment="center"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="28dp"/>
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>
