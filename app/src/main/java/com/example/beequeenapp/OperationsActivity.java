@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-01-14.
+ *  * Last modified 2020-03-07.
  *
  ******************************************************************************/
 
@@ -63,7 +63,7 @@ public class OperationsActivity extends AppCompatActivity {
         getIntentFromBasicFarmActivity();
 
         //setting current date
-        currentDate();
+        MainActivity.currentDate(currDateTV);
 
         //setting item step values
         chooseRightStepAndSetDate(stepStr);
@@ -185,14 +185,6 @@ public class OperationsActivity extends AppCompatActivity {
         calendar2.add(Calendar.DAY_OF_YEAR, days);
         dateProcessToDoTV.setText(data3);
         nextProcessDateTV.setText(formatDaty.format(calendar2.getTime()));
-    }
-    //setting current date
-    private void currentDate()
-    {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        String currentDate = dateFormat.format(calendar.getTime());
-        currDateTV.setText(currentDate);
     }
     //setting confirmation button if current date and processToDo date are the same. Implemented, not active yet.
     private void compareDatesToSetButton()

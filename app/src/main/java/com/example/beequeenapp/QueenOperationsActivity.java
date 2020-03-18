@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-01-14.
+ *  * Last modified 2020-03-07.
  *
  ******************************************************************************/
 
@@ -67,7 +67,7 @@ public class QueenOperationsActivity extends AppCompatActivity {
         posQ = getIntent().getExtras().getInt("POSQ");
 
         //setting methods info, right step info, description and currentDateTV
-        currentDate();
+        MainActivity.currentDate(currDateTVQ);
         InfoQueen.MethodChanger(InfoQueen.getStepQ());
         chooseRightStepQ(InfoQueen.getStepQ());
         setButtonVisibilityIfCheckBoxIsVisible();
@@ -155,14 +155,6 @@ public class QueenOperationsActivity extends AppCompatActivity {
         });
     }
 
-    //setting current date
-    private void currentDate()
-    {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        String currentDate = dateFormat.format(calendar.getTime());
-        currDateTVQ.setText(currentDate);
-    }
     //setting saveChangesButton visibility
     private void setButtonVisibilityIfCheckBoxIsVisible()
     {

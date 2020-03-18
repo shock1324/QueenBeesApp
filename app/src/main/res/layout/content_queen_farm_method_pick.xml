@@ -3,7 +3,7 @@
   ~ /*
   ~  * Created by Cezary Wasilewski.
   ~  * Copyright (c) 2020. All rights reserved.
-  ~  * Last modified 2020-01-14.
+  ~  * Last modified 2020-03-07.
   ~  */
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
@@ -103,6 +103,8 @@
             android:id="@+id/QueenMethodInfoID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"

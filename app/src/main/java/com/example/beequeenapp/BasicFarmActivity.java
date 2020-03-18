@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-01-14.
+ *  * Last modified 2020-03-07.
  *
  ******************************************************************************/
 
@@ -50,7 +50,7 @@ public class BasicFarmActivity extends AppCompatActivity {
         DeleteAllFinishedFarms = findViewById(R.id.DeleteAllFinishedFarmsID);
 
         //setting current date
-        currentDate();
+        MainActivity.currentDate(currentDateTV);
 
         //creating new or loading previous arrayList with farms to farmList
         createNewArrayListOrLoadPreviousOne();
@@ -229,15 +229,6 @@ public class BasicFarmActivity extends AppCompatActivity {
             arrayListInfo = new ArrayList<Info>();
         }
         farmList.setAdapter(adapterView());
-    }
-
-    //setting current date
-    private void currentDate()
-    {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        String currentDateStr = dateFormat.format(calendar.getTime());
-        currentDateTV.setText(currentDateStr);
     }
 
     //changing colors of listView items

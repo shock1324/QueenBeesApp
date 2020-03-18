@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-01-14.
+ *  * Last modified 2020-03-07.
  *
  ******************************************************************************/
 
@@ -50,7 +50,7 @@ public class AddingQueenFarmActivity extends AppCompatActivity {
         //setting method and date
         choosenMethodStep1Q.setText(getIntent().getStringExtra("Q_MethodStep1"));
         choosenMethodStep2Q.setText(getIntent().getStringExtra("Q_MethodStep2"));
-        currentDate();
+        MainActivity.currentDate(currDateTVQ);
 
         /*Sending back values to MainActivity*/
         startQueenFarmButton.setOnClickListener(new View.OnClickListener() {
@@ -95,12 +95,5 @@ public class AddingQueenFarmActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-    private void currentDate()
-    {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        currentDateQ = dateFormat.format(calendar.getTime());
-        currDateTVQ.setText(currentDateQ);
     }
 }

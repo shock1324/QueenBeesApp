@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-01-14.
+ *  * Last modified 2020-03-07.
  *
  ******************************************************************************/
 
@@ -51,7 +51,7 @@ public class QueenFarmListActivity extends AppCompatActivity {
         DeleteAllFinishedFarms = findViewById(R.id.DeleteAllBFinishedFarmsQID);
 
         //adding current date to textView with a method
-        currentDateQ();
+        MainActivity.currentDate(QueenCurrentDateTV);
 
         //creating new or loading previous arrayList with farms to QueenFarmList
         createNewArrayListOrLoadPreviousOneQ();
@@ -220,16 +220,6 @@ public class QueenFarmListActivity extends AppCompatActivity {
         ArrayList<InfoQueen> obj =gson.fromJson(json,type);
         return obj;
     }
-
-    //setting current date
-    private void currentDateQ()
-    {
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        String currentDateStr = dateFormat.format(calendar.getTime());
-        QueenCurrentDateTV.setText(currentDateStr);
-    }
-
     //creating new arrayList or loading previous one
     private void createNewArrayListOrLoadPreviousOneQ()
     {

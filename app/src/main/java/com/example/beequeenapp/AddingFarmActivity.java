@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-01-14.
+ *  * Last modified 2020-03-07.
  *
  ******************************************************************************/
 
@@ -40,7 +40,7 @@ public class AddingFarmActivity extends AppCompatActivity {
 
         //setting method and date
         choosenMethod.setText(getIntent().getStringExtra("METHOD"));
-        currentDate();
+        MainActivity.currentDate(currDateTV);
 
         //Sending back values to MainActivity
         startButton.setOnClickListener(new View.OnClickListener() {
