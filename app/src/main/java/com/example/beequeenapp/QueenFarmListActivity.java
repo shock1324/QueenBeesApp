@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-03-07.
+ *  * Last modified 2020-03-19
  *
  ******************************************************************************/
 
@@ -36,7 +36,7 @@ import java.util.Date;
 public class QueenFarmListActivity extends AppCompatActivity {
 
     ListView QueenFarmList;
-    TextView QueenCurrentDateTV;
+    TextView dateDisplay, timeDisplay;
     Button AddNewQueenFarmButton , DeleteAllFinishedFarms;
     ArrayList<InfoQueen> arrayListInfoQ;
 
@@ -48,13 +48,16 @@ public class QueenFarmListActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         //Adding XML objects
-        QueenCurrentDateTV = findViewById(R.id.dateQueenFarmListID);
+        dateDisplay = findViewById(R.id.dateQueenFarmListID);
+        timeDisplay = findViewById(R.id.timeQueenFarmListID);
         QueenFarmList = findViewById(R.id.QueenFarmListID);
         AddNewQueenFarmButton = findViewById(R.id.AddNewQueenFarmID);
         DeleteAllFinishedFarms = findViewById(R.id.DeleteAllBFinishedFarmsQID);
 
-        //adding current date to textView with a method
-        MainActivity.currentDate(QueenCurrentDateTV);
+        //setting current date and time display
+        DisplayTimeAndDate x = new DisplayTimeAndDate(timeDisplay, dateDisplay);
+        x.displayDateMethod();
+        x.displayTimeMethod();
 
         //creating new or loading previous arrayList with farms to QueenFarmList
         createNewArrayListOrLoadPreviousOneQ();
@@ -169,31 +172,6 @@ public class QueenFarmListActivity extends AppCompatActivity {
                         .show();
             }
         });
-
-        //showing current time in activity
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(10);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                TextView tTime = findViewById(R.id.timeQueenFarmListID);
-                                long date = System.currentTimeMillis();
-                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
-                                String timeString = sdfT.format(date);
-                                tTime.setText(timeString);
-                            }
-                        });
-                    }
-                } catch (InterruptedException e) {
-                }
-            }
-        };
-
-        t.start();
     }
 
     //getting data back from other activities
@@ -270,7 +248,7 @@ public class QueenFarmListActivity extends AppCompatActivity {
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent)
             {
                 InfoQueen infQ = arrayListInfoQ.get(position);
-                String dateTday = QueenCurrentDateTV.getText().toString();
+                String dateTday = dateDisplay.getText().toString();
                 String farmProcessDate = infQ.getDateInfoQ();
 
                 View view = super.getView(position, convertView, parent);

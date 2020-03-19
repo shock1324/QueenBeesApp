@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-03-07.
+ *  * Last modified 2020-03-19
  *
  ******************************************************************************/
 
@@ -19,10 +19,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import java.text.SimpleDateFormat;
-
 public class AddingQueenFarmActivity extends AppCompatActivity {
-    TextView choosenMethodStep1Q, choosenMethodStep2Q, currDateTVQ;
+    TextView choosenMethodStep1Q, choosenMethodStep2Q, dateDisplay, timeDisplay;
     EditText QueenName, WeedingBeehiveNumber;
     Button startQueenFarmButton;
     String currentDateQ;
@@ -40,13 +38,18 @@ public class AddingQueenFarmActivity extends AppCompatActivity {
         choosenMethodStep2Q = findViewById(R.id.PickedMethodStep2ID);
         QueenName = findViewById(R.id.QueenNumberNameID);
         WeedingBeehiveNumber = findViewById(R.id.WeedingHiveNumberID);
-        currDateTVQ = findViewById(R.id.dateMainAddingQueenFarmID);
+        timeDisplay = findViewById(R.id.timeMainAddingQueenFarmID);
+        dateDisplay = findViewById(R.id.dateMainAddingQueenFarmID);
         startQueenFarmButton = findViewById(R.id.startQueenFarmID);
 
-        //setting method and date
+        //setting method
         choosenMethodStep1Q.setText(getIntent().getStringExtra("Q_MethodStep1"));
         choosenMethodStep2Q.setText(getIntent().getStringExtra("Q_MethodStep2"));
-        MainActivity.currentDate(currDateTVQ);
+
+        //setting current date and time display
+        DisplayTimeAndDate x = new DisplayTimeAndDate(timeDisplay, dateDisplay);
+        x.displayDateMethod();
+        x.displayTimeMethod();
 
         /*Sending back values to MainActivity*/
         startQueenFarmButton.setOnClickListener(new View.OnClickListener() {
@@ -75,7 +78,7 @@ public class AddingQueenFarmActivity extends AppCompatActivity {
                         method2.equals("Poddanie do ulika weselnego \n niewygryzionego matecznika"))
                     {
                         step = "1muNW";
-                        date = currDateTVQ.getText().toString();
+                        date = dateDisplay.getText().toString();
                     }
                     else
                     {
@@ -91,28 +94,5 @@ public class AddingQueenFarmActivity extends AppCompatActivity {
                 }
             }
         });
-        //showing current time in activity
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(10);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                TextView tTime = findViewById(R.id.timeMainAddingQueenFarmID);
-                                long date = System.currentTimeMillis();
-                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
-                                String timeString = sdfT.format(date);
-                                tTime.setText(timeString);
-                            }
-                        });
-                    }
-                } catch (InterruptedException e) {
-                }
-            }
-        };
-        t.start();
     }
 }

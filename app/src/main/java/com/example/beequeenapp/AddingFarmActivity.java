@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-03-07.
+ *  * Last modified 2020-03-19
  *
  ******************************************************************************/
 
@@ -19,10 +19,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import java.text.SimpleDateFormat;
-
 public class AddingFarmActivity extends AppCompatActivity {
-    TextView choosenMethod, currDateTV;
+    TextView choosenMethod, dateDisplay, timeDisplay;
     EditText beeFamilyName;
     Button startButton;
     String currentDate;
@@ -37,12 +35,17 @@ public class AddingFarmActivity extends AppCompatActivity {
         //Adding XML objects
         choosenMethod = findViewById(R.id.PickedMethodStep1ID);
         beeFamilyName = findViewById(R.id.WeedingHiveNumberID);
-        currDateTV = findViewById(R.id.dateMainAddingFarmID);
+        timeDisplay = findViewById(R.id.timeMainAddingFarmID);
+        dateDisplay = findViewById(R.id.dateMainAddingFarmID);
         startButton = findViewById(R.id.startID);
 
-        //setting method and date
+        //setting method
         choosenMethod.setText(getIntent().getStringExtra("METHOD"));
-        MainActivity.currentDate(currDateTV);
+
+        //setting current date and time display
+        DisplayTimeAndDate x = new DisplayTimeAndDate(timeDisplay, dateDisplay);
+        x.displayDateMethod();
+        x.displayTimeMethod();
 
         //Sending back values to MainActivity
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -55,7 +58,7 @@ public class AddingFarmActivity extends AppCompatActivity {
                 else {
                     Intent intent = new Intent();
                     String name = beeFamilyName.getText().toString();
-                    String date = currDateTV.getText().toString();
+                    String date = dateDisplay.getText().toString();
                     String method = choosenMethod.getText().toString();
                     String step = "1";
                     intent.putExtra("METHOD2", method);
@@ -67,29 +70,6 @@ public class AddingFarmActivity extends AppCompatActivity {
                 }
             }
         });
-        //showing current time in activity
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(10);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                TextView tTime = findViewById(R.id.timeMainAddingFarmID);
-                                long date = System.currentTimeMillis();
-                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
-                                String timeString = sdfT.format(date);
-                                tTime.setText(timeString);
-                            }
-                        });
-                    }
-                } catch (InterruptedException e) {
-                }
-            }
-        };
-        t.start();
     }
 }
 

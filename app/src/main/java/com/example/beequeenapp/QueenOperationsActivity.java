@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-03-07.
+ *  * Last modified 2020-03-19
  *
  ******************************************************************************/
 
@@ -30,7 +30,7 @@ import java.util.Date;
 public class QueenOperationsActivity extends AppCompatActivity {
 
     TextView choosenKindOfQueenTV, choosenHowToAddQueenMethodTV, weedingHiveNumber, processToDoTVQ,
-        dateProcessToDoTVQ, nextProcessTVQ, currDateTVQ, QueenFarmNameTV, processInfoTVQ,
+        dateProcessToDoTVQ, nextProcessTVQ, dateDisplay, timeDisplay, QueenFarmNameTV, processInfoTVQ,
         nextProcessDateTVQ;
     Button saveChangesButtonQ;
     String nameStrQ, numberStrQ, dateStrQ, stepStrQ,  kindOfQueenToFarmStr, howToAddQueenMethodStr,
@@ -57,7 +57,8 @@ public class QueenOperationsActivity extends AppCompatActivity {
         processToDoTVQ = findViewById(R.id.processToDoIDQ);
         dateProcessToDoTVQ = findViewById(R.id.dateProcessToDoIDQ);
         nextProcessTVQ = findViewById(R.id.nextProcessIDQ);
-        currDateTVQ = findViewById(R.id.dateQueenOperationsID);
+        dateDisplay = findViewById(R.id.dateQueenOperationsID);
+        timeDisplay = findViewById(R.id.timeQueenOperationsID);
         processInfoTVQ = findViewById(R.id.processInfoIDQO);
         nextProcessDateTVQ = findViewById(R.id.nextProcessDateIDQ);
         saveChangesButtonQ = findViewById(R.id.saveChangesIDQO);
@@ -69,8 +70,12 @@ public class QueenOperationsActivity extends AppCompatActivity {
         InfoQueen = (InfoQueen)getIntent().getExtras().get("OBJQ");
         posQ = getIntent().getExtras().getInt("POSQ");
 
-        //setting methods info, right step info, description and currentDateTV
-        MainActivity.currentDate(currDateTVQ);
+        //setting current date and time display
+        DisplayTimeAndDate x = new DisplayTimeAndDate(timeDisplay, dateDisplay);
+        x.displayDateMethod();
+        x.displayTimeMethod();
+
+        //setting methods info, right step info and description
         InfoQueen.MethodChanger(InfoQueen.getStepQ());
         chooseRightStepQ(InfoQueen.getStepQ());
         setButtonVisibilityIfCheckBoxIsVisible();
@@ -156,32 +161,6 @@ public class QueenOperationsActivity extends AppCompatActivity {
             }
 
         });
-
-
-        //showing current time in activity
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(10);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                TextView tTime = findViewById(R.id.timeQueenOperationsID);
-                                long date = System.currentTimeMillis();
-                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
-                                String timeString = sdfT.format(date);
-                                tTime.setText(timeString);
-                            }
-                        });
-                    }
-                } catch (InterruptedException e) {
-                }
-            }
-        };
-
-        t.start();
     }
 
     //setting saveChangesButton visibility
@@ -267,7 +246,7 @@ public class QueenOperationsActivity extends AppCompatActivity {
     // Implemented, not active yet.
     private void compareDatesToSetButton()
     {
-        if(currDateTVQ.getText().toString().equals(dateStrQ))
+        if(dateDisplay.getText().toString().equals(dateStrQ))
             saveChangesButtonQ.setEnabled(true);
         else
             saveChangesButtonQ.setEnabled(false);

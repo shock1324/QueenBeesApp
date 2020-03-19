@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-03-07.
+ *  * Last modified 2020-03-19
  *
  ******************************************************************************/
 
@@ -30,8 +30,8 @@ import java.util.Date;
 public class OperationsActivity extends AppCompatActivity {
 
     CheckBox warmer;
-    TextView choosenMethodTV, processToDoTV, dateProcessToDoTV, nextProcessTV, currDateTV,
-        farmNameTV, processInfoTV, nextProcessDateTV;
+    TextView choosenMethodTV, processToDoTV, dateProcessToDoTV, nextProcessTV, dateDisplay,
+            timeDisplay, farmNameTV, processInfoTV, nextProcessDateTV ;
     Button saveChangesButton;
     String nameStr, methodStr, dateStr, stepStr, stepStr2;
     int pos;
@@ -47,7 +47,8 @@ public class OperationsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //Adding XML objects
-        currDateTV = findViewById(R.id.dateOperationsID);
+        dateDisplay = findViewById(R.id.dateOperationsID);
+        timeDisplay = findViewById(R.id.timeOperationsID);
         choosenMethodTV = findViewById(R.id.getKindOfQueenToFarmID);
         farmNameTV = findViewById(R.id.getWeedingHiveNumberID);
         processToDoTV = findViewById(R.id.processToDoIDQ);
@@ -61,8 +62,10 @@ public class OperationsActivity extends AppCompatActivity {
         //getting intent from BasicFarmActivity list
         getIntentFromBasicFarmActivity();
 
-        //setting current date
-        MainActivity.currentDate(currDateTV);
+        //setting current date and time display
+        DisplayTimeAndDate x = new DisplayTimeAndDate(timeDisplay, dateDisplay);
+        x.displayDateMethod();
+        x.displayTimeMethod();
 
         //setting item step values
         chooseRightStepAndSetDate(stepStr);
@@ -139,29 +142,6 @@ public class OperationsActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
-        //showing current time in activity
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(10);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                TextView tTime = findViewById(R.id.timeOperationsID);
-                                long date = System.currentTimeMillis();
-                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
-                                String timeString = sdfT.format(date);
-                                tTime.setText(timeString);
-                            }
-                        });
-                    }
-                } catch (InterruptedException e) {
-                }
-            }
-        };
-        t.start();
     }
 
     //getting intent from BasicFarmActivity list
@@ -211,7 +191,7 @@ public class OperationsActivity extends AppCompatActivity {
     //setting confirmation button if current date and processToDo date are the same. Implemented, not active yet.
     private void compareDatesToSetButton()
     {
-        if(currDateTV.getText().toString().equals(dateStr))
+        if(dateDisplay.getText().toString().equals(dateStr))
             saveChangesButton.setEnabled(true);
         else
             saveChangesButton.setEnabled(false);

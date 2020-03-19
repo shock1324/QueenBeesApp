@@ -2,7 +2,7 @@
  *
  *  * Created by Cezary Wasilewski.
  *  * Copyright (c) 2020. All rights reserved.
- *  * Last modified 2020-03-07.
+ *  * Last modified 2020-03-19
  *
  ******************************************************************************/
 
@@ -18,12 +18,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 public class MainActivity extends AppCompatActivity {
 Button BasicFarmButton, QueenFarmListButton, CloseAppButton, InfoAboutApp;
-TextView currentDateMain;
+TextView dateDisplay, timeDisplay;
     private static Context mContext;
 
 
@@ -42,10 +39,13 @@ TextView currentDateMain;
         QueenFarmListButton = findViewById(R.id.QueenFarmButtonID);
         InfoAboutApp = findViewById(R.id.InfoAboutAppID);
         CloseAppButton = findViewById(R.id.CloseAppID);
-        currentDateMain = findViewById(R.id.dateMainID);
+        dateDisplay = findViewById(R.id.dateMainID);
+        timeDisplay = findViewById(R.id.timeMainID);
 
-        //setting current date
-        currentDate(currentDateMain);
+        //settint current date and time display
+        DisplayTimeAndDate x = new DisplayTimeAndDate(timeDisplay, dateDisplay);
+        x.displayDateMethod();
+        x.displayTimeMethod();
 
         //Setting buttons listeners
         BasicFarmButton.setOnClickListener(new View.OnClickListener() {
@@ -76,44 +76,7 @@ TextView currentDateMain;
                 System.exit(0);
             }
         });
-
-        //showing current time in activity
-        Thread t = new Thread() {
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(10);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                TextView tTime = findViewById(R.id.timeMainID);
-                                long date = System.currentTimeMillis();
-                                SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");
-                                String timeString = sdfT.format(date);
-                                tTime.setText(timeString);
-                            }
-                        });
-                    }
-                } catch (InterruptedException e) {
-                }
-            }
-        };
-        t.start();
     }
-
-
-
-
-    //setting current date - used in other activities
-    public static void currentDate(TextView x){
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        String currentDateStr = dateFormat.format(calendar.getTime());
-        x.setText(currentDateStr);
-    }
-
-
 
     public static Context getContext() {
         return mContext;
