@@ -29,7 +29,7 @@ public class DisplayTimeAndDate {
             public void run() {
                 try {
                     while (!isInterrupted()) {
-                        Thread.sleep(10);
+                        Thread.sleep(100);
                             TextView tTime = time;
                             long date = System.currentTimeMillis();
                             SimpleDateFormat sdfT = new SimpleDateFormat("kk:mm:ss");

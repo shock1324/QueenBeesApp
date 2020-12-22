@@ -48,6 +48,7 @@ TextView dateDisplay, timeDisplay;
         x.displayTimeMethod();
 
         //Setting buttons listeners
+
         BasicFarmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

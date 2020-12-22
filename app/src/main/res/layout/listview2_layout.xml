@@ -3,7 +3,7 @@
   ~ /*
   ~  * Created by Cezary Wasilewski.
   ~  * Copyright (c) 2020. All rights reserved.
-  ~  * Last modified 2020-03-07.
+  ~  * Last modified 2020-03-19
   ~  */
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
@@ -20,13 +20,27 @@
         android:gravity="center"
         android:layout_weight="24"
         android:text="x" />
-    <TextView
-        android:id="@+id/QueenFarmDateLayID"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_weight="23"
-        android:gravity="center"
-        android:text="x" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="24"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/QueenFarmDateLayID"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="x" />
+            <TextView
+                android:id="@+id/QueenFarmTimeLayID"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="x" />
+        </LinearLayout>
+
     <TextView
         android:id="@+id/QueenHomeLayID"
         android:layout_width="match_parent"
